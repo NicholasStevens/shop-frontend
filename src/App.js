@@ -5,9 +5,8 @@ import { HomePage, DetailsPage, ShopPage } from "./pages";
 function App() {
   return (
     <div className="App">
-      <div>
-        <NavBar />
-      </div>
+      <NavBar />
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />
