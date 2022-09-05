@@ -9,27 +9,26 @@ import { MdFavoriteBorder } from "react-icons/md";
 function NavBar() {
   return (
     <div className="navbar_container">
-      <div className="navbar_navigate">
-        <div className="navbar_nav">
-          <img src={TheShop} alt="" className="logo" />
-          <NavLink to="/" className="links">
-            Home
-          </NavLink>
-          <NavLink to="/shop" className="links">
-            Shop
-          </NavLink>
-          <NavLink to="/" className="links">
-            About
-          </NavLink>
-        </div>
-        <div>
-          <input type="text" className="navbar_search"></input>
-        </div>
+      <div className="navbar_nav">
+        <img src={TheShop} alt="" className="logo" />
+        <NavLink to="/" className="links">
+          Home
+        </NavLink>
+        <NavLink to="/shop" className="links">
+          Shop
+        </NavLink>
+        <NavLink to="/" className="links">
+          About
+        </NavLink>
       </div>
+      <div className="navbar_searchbox">
+        <input type="text" className="navbar_searchbar"></input>
+      </div>
+
       <div className="navbar_links">
-        <MdPersonOutline className="links" />
-        <MdShoppingCart className="links" />
-        <MdFavoriteBorder className="links" />
+        <MdPersonOutline />
+        <MdShoppingCart />
+        <MdFavoriteBorder />
       </div>
     </div>
   );
