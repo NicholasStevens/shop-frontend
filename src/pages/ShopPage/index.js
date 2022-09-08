@@ -37,8 +37,15 @@ function ShopPage() {
       {!productList
         ? "LOADING"
         : productList.map((product) => {
-            const { title, price, mainImage, description, id, rating } =
-              product;
+            const {
+              title,
+              price,
+              mainImage,
+              description,
+              id,
+              rating,
+              category,
+            } = product;
             return (
               <ProductCard
                 key={id}
@@ -48,6 +55,7 @@ function ShopPage() {
                 mainImage={mainImage}
                 rating={rating}
                 price={price}
+                category={category}
               />
             );
           })}
