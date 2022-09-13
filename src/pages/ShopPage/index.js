@@ -2,6 +2,7 @@ import { ProductCard } from "../../components";
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./styles.css";
 
 // function price_low_to_high(product_a, product_b) {
 //   return product_a.price - product_b.price;
@@ -33,32 +34,37 @@ function ShopPage() {
   //};
 
   return (
-    <div>
-      {!productList
-        ? "LOADING"
-        : productList.map((product) => {
-            const {
-              title,
-              price,
-              mainImage,
-              description,
-              id,
-              rating,
-              category,
-            } = product;
-            return (
-              <ProductCard
-                key={id}
-                id={id}
-                title={title}
-                description={description}
-                mainImage={mainImage}
-                rating={rating}
-                price={price}
-                category={category}
-              />
-            );
-          })}
+    <div className="shop_container">
+      <div className="filter_display">
+        <p>Filter options</p>
+      </div>
+      <div className="products_display">
+        {!productList
+          ? "LOADING"
+          : productList.map((product) => {
+              const {
+                title,
+                price,
+                mainImage,
+                description,
+                id,
+                rating,
+                category,
+              } = product;
+              return (
+                <ProductCard
+                  key={id}
+                  id={id}
+                  title={title}
+                  description={description}
+                  mainImage={mainImage}
+                  rating={rating}
+                  price={price}
+                  category={category}
+                />
+              );
+            })}
+      </div>
     </div>
   );
 }
